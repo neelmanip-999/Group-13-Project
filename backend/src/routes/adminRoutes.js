@@ -4,7 +4,6 @@ const authMiddleware = require('../middleware/authMiddleware');
 
 const router = express.Router();
 
-// All admin routes require authentication
 router.use(authMiddleware);
 
 router.get('/login-attempts', (req, res, next) => AdminController.getLoginAttempts(req, res, next));
